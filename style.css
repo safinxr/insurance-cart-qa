@@ -1,0 +1,68 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800;900&family=Roboto:wght@400;500&display=swap');
+
+
+* {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+
+}
+
+.roboto {
+    font-family: 'Roboto', sans-serif;
+}
+
+.sw-one {
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+}
+
+.sw-two {
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+}
+
+.h-sw:hover {
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+}
+
+
+
+
+
+/* ======================Navbar================== */
+.nav-link {
+    font-weight: 500;
+    font-size: 18px;
+    padding-bottom: 2.5px;
+    border-bottom: 2.5px solid #BD3959;
+}
+
+.nav-link:hover {
+    border-bottom: 2.5px solid white;
+}
+
+.dropdown-menu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0px;
+    background-color: white;
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+    width: 200px;
+    border-radius: 5px;
+
+}
+
+.dropdown-menu li {
+    padding: 5px 10px;
+}
+
+.dropdown-menu li:hover {
+    background-color: #BD3959;
+    color: white;
+}
+
+.dropdown:hover .dropdown-menu {
+    display: block;
+}

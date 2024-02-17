@@ -1,13 +1,141 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="shortcut icon" href="image/icons/fav-icon.png" type="image/x-icon">
+<html lang="en" data-theme="light">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Compare best price insurance</title>
+    <meta
+      name="description"
+      content="Check insurance deals and get best price policy of Auto, medical term plan for senior citizen, health care benefits and travel."
+    />
+    <meta name="keywords" content="Corporation car bike health" />
+    <link rel="shortcut icon" href="image/icons/fav-icon.png" />
 
-</head>
-<body>
-    
-</body>
+    <!--===== Style sheet =====-->
+    <link rel="stylesheet" href="style.css" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/daisyui@4.7.2/dist/full.min.css"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script
+      src="https://kit.fontawesome.com/71bc8e0eff.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
+    <nav class="bg-color_black shadow-md sticky top-0 z-40 bg-[#BD3959] text-white">
+      <div class="navbar max-w-6xl mx-auto">
+        <div class="navbar-start">
+          <!-- =========== Dropdown ======= -->
+          <div class="dropdown">
+            <div tabindex="0" role="button" class="btn btn-ghost lg:hidden">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                class="h-5 w-5"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M4 6h16M4 12h8m-8 6h16"
+                />
+              </svg>
+            </div>
+            <ul
+              tabindex="0"
+              class="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52"
+            >
+              <li><a href="../">Home</a></li>
+              <li>
+                <a>Shop</a>
+                <ul class="p-2">
+                  <li><a href="health-insurance.html">Health Insurance</a></li>
+                  <li><a href="travel-insurance.html">Travel Insurance</a></li>
+                  <li>
+                    <a href="business-insurance.html">Business Insurance</a>
+                  </li>
+                  <li>
+                    <a href="buy-car-insurance-automobile.html">
+                      Car Insurance</a
+                    >
+                  </li>
+                  <li><a href="house-insurance.html">House Insurance</a></li>
+                  <li>
+                    <a href="compare-life-insurance.html">Life Insurance</a>
+                  </li>
+                </ul>
+              </li>
+              <li><a href="contact.html">Contact us</a></li>
+              <li><a onclick="scrollToTarget()">Career</a></li>
+              <li>
+                <a href=""
+                  ><i class="fa-sduration-500olid fa-right-to-bracket"></i>
+                  Log-in</a
+                >
+              </li>
+            </ul>
+          </div>
+          <!-- =========logo=======-->
+          <a class="flex items-center gap-1" href="../"
+            ><img class="w-10" src="image/icons/logo.png" alt="" />
+            <span class="uppercase font-bold text-2xl mt-0.5"
+              >Insurance</span
+            ></a
+          >
+        </div>
+
+        <!-- =========nav link=======-->
+        <div class="navbar-end hidden lg:flex">
+          <ul class="flex gap-8 items-center">
+            <li>
+              <a href="../" class="nav-link duration-500">Home</a>
+            </li>
+
+            <li class="dropdown">
+              <a href="" class="nav-link duration-500">Services</a>
+              <ul class="dropdown-menu text-black">
+                <li><a href="health-insurance.html">Health Insurance</a></li>
+                <li><a href="travel-insurance.html">Travel Insurance</a></li>
+                <li>
+                  <a href="business-insurance.html">Business Insurance</a>
+                </li>
+                <li>
+                  <a href="buy-car-insurance-automobile.html"> Car Insurance</a>
+                </li>
+                <li><a href="house-insurance.html">House Insurance</a></li>
+                <li>
+                  <a href="compare-life-insurance.html">Life Insurance</a>
+                </li>
+              </ul>
+            </li>
+
+            <li>
+              <a href="contact.html" class="nav-link duration-500"
+                >Contact us</a
+              >
+            </li>
+
+            <li>
+              <a
+                onclick="scrollToTarget()"
+                class="nav-link duration-500 cursor-pointer"
+                >Career</a
+              >
+            </li>
+
+            <li>
+              <a href="" class="nav-link duration-500"
+                ><i class="fa-solid fa-right-to-bracket"></i> Log-in</a
+              >
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </body>
 </html>
