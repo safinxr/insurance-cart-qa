@@ -23,6 +23,12 @@
       src="https://kit.fontawesome.com/71bc8e0eff.js"
       crossorigin="anonymous"
     ></script>
+    <!--========= Email JS =======-->
+    <script
+      type="text/javascript"
+      src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"
+    ></script>
+    <script src="main.js"></script>
   </head>
   <body>
     <!-- Navbar -->
@@ -349,7 +355,7 @@
           section, designed to provide quick and comprehensive information on
           various aspects of insurance coverage, claims, and policies.
         </p>
-        <div class="mt-10 md:mt-12 flex flex-col-reverse lg:flex-row  gap-12">
+        <div class="mt-10 md:mt-12 flex flex-col-reverse lg:flex-row gap-12">
           <div class="flex-1">
             <!-- Q1 -->
             <div class="collapse collapse-plus border rounded-3xl">
@@ -358,14 +364,16 @@
                 Is it cheaper to buy insurance through Insurance Cart?
               </div>
               <div class="collapse-content">
-                <p>Insurance rates are regulated by law, which means that no
+                <p>
+                  Insurance rates are regulated by law, which means that no
                   company, broker, or agent can offer you a discount on a
                   policy. That doesn't mean you can't find ways to save money,
                   though! Each insurer calculates risk differently, and they all
                   strive to offer policies at competitive prices. That's why
                   Insurance Cart helps you compare quotes from multiple
                   companies in one place: to make it easy to spot potential
-                  savings.</p>
+                  savings.
+                </p>
               </div>
             </div>
             <!-- Q2 -->
@@ -375,7 +383,13 @@
                 Who am I buying my policy form?
               </div>
               <div class="collapse-content">
-                <p> It's your call. If you want to purchase a policy directly through your provider, they'll have your quote ready. Or you could skip the trip to another site and buy a policy through The GO Insurance. No matter which you choose, it's the same policy.</p>
+                <p>
+                  It's your call. If you want to purchase a policy directly
+                  through your provider, they'll have your quote ready. Or you
+                  could skip the trip to another site and buy a policy through
+                  The GO Insurance. No matter which you choose, it's the same
+                  policy.
+                </p>
               </div>
             </div>
             <!-- Q3 -->
@@ -386,12 +400,14 @@
                 company?
               </div>
               <div class="collapse-content">
-                <p> No. We’re an independent insurance broker, which means that
+                <p>
+                  No. We’re an independent insurance broker, which means that
                   we're not owned by an insurance company, nor do we own one.
                   Instead, we sell insurance policies from multiple insurers
                   without bias or favor toward any of them. It’s important to us
                   that we help you find the right insurance policy for your
-                  needs — not which company you buy it from.</p>
+                  needs — not which company you buy it from.
+                </p>
               </div>
             </div>
             <!-- Q4 -->
@@ -401,9 +417,11 @@
                 Is Insurance Cart licensed?
               </div>
               <div class="collapse-content">
-                <p> Yes! All insurance brokers are required by law to be licensed
+                <p>
+                  Yes! All insurance brokers are required by law to be licensed
                   in each state they do business. You can find our licenses
-                  here.</p>
+                  here.
+                </p>
               </div>
             </div>
           </div>
@@ -412,6 +430,327 @@
           </div>
         </div>
       </section>
+
+      <!-- career section -->
+      <section
+        id="career"
+        class="max-w-6xl mx-3 md:mx-7 lg:mx-auto my-16 lg:my-28 px-2 sw-two py-12 rounded-3xl"
+      >
+        <h2 class="text-3xl md:text-4xl font-bold md:my-4 text-center">
+          Submit Your Resume
+        </h2>
+        <form
+          id="contact-form"
+          class="py-6 px-4 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 font-medium roboto"
+        >
+          <!-- Name -->
+          <div class="">
+            <label class="label">
+              <span class="label-text">Name</span>
+            </label>
+            <input
+              type="text"
+              name="name"
+              placeholder="Enter your name"
+              class="input input-bordered h-10 w-full input-warning text-base"
+              required
+            />
+          </div>
+          <!-- Email -->
+          <div class="">
+            <label class="label">
+              <span class="label-text">Email</span>
+            </label>
+            <input
+              type="email"
+              name="email"
+              placeholder="Enter your email"
+              class="input input-bordered h-10 w-full input-warning"
+              required
+            />
+          </div>
+          <!-- Phone -->
+          <div class="">
+            <label class="label">
+              <span class="label-text">Phone Number</span>
+            </label>
+            <input
+              type="number"
+              name="phone"
+              placeholder="Enter your Phone Number"
+              class="input input-bordered h-10 w-full input-warning"
+              required
+            />
+          </div>
+          <!-- Position Apply For  -->
+          <div class="">
+            <label class="label">
+              <span class="label-text">Position Apply For</span>
+            </label>
+            <input
+              type="text"
+              name="position"
+              placeholder="Position Name"
+              class="input input-bordered h-10 w-full input-warning text-base"
+              name="position"
+              required
+            />
+          </div>
+          <!-- What is your Salary expectations?  -->
+          <div class="">
+            <label class="label">
+              <span class="label-text">What is your Salary expectations?</span>
+            </label>
+            <input
+              type="number"
+              name="salary"
+              placeholder="What is your Salary expectations?"
+              class="input input-bordered h-10 w-full input-warning"
+              required
+            />
+          </div>
+          <!-- Preferred Job Location  -->
+          <div class=" ">
+            <label class="label">
+              <span class="label-text">Preferred Job Location </span>
+            </label>
+            <select
+              class="text-base w-full h-10 border border-warning px-3 rounded-lg outline-none"
+              name="location"
+              required
+            >
+              <option disabled selected>Please choose an option</option>
+              <option>Qatar</option>
+              <option>India</option>
+              <option>UAE</option>
+              <option>Saudi Arabia</option>
+              <option>Canada</option>
+            </select>
+          </div>
+          <!-- Visa Status  -->
+          <div class="">
+            <label class="label">
+              <span class="label-text">Visa Status </span>
+            </label>
+            <select
+              class="text-base w-full h-10 border border-warning px-3 rounded-lg outline-none"
+              name="visaStatus"
+              required
+            >
+              <option disabled selected>Please choose an option</option>
+              <option>Employment</option>
+              <option>Spouse</option>
+              <option>Visit</option>
+              <option>Student</option>
+              <option>Citizenship</option>
+              <option>Parent sponsor</option>
+            </select>
+          </div>
+          <!-- If you an animal, which you want to be? -->
+          <div class="">
+            <label class="label">
+              <span class="label-text"
+                >If you an animal, which you want to be?</span
+              >
+            </label>
+            <input
+              type="text"
+              name="animal"
+              placeholder="Animal which matches your personality"
+              class="input input-bordered h-10 w-full input-warning"
+              required
+            />
+          </div>
+          <!-- Description Or Cover Letter -->
+          <div class="">
+            <label class="label">
+              <span class="label-text">Description Or Cover Letter</span>
+            </label>
+            <textarea
+              name="description"
+              rows="1"
+              class="text-base w-full h-10 border border-warning px-3 rounded-lg outline-none pt-2"
+              placeholder="Description"
+              required
+            ></textarea>
+          </div>
+          <!-- Why are you leaving your current job? -->
+          <div class="">
+            <label class="label">
+              <span class="label-text"
+                >Why are you leaving your current job?</span
+              >
+            </label>
+            <textarea
+              rows="1"
+              name="leavingReason"
+              class="text-base w-full h-10 border border-warning px-3 rounded-lg outline-none pt-2"
+              placeholder="Reason?"
+              required
+            ></textarea>
+          </div>
+          <!-- Why you are right candidate for this job? -->
+          <div class="">
+            <label class="label">
+              <span class="label-text"
+                >Why you are right candidate for this job?</span
+              >
+            </label>
+            <textarea
+              name="whyCandidate"
+              rows="1"
+              class="text-base w-full h-10 border border-warning px-3 rounded-lg outline-none pt-2"
+              placeholder="Explain?"
+              required
+            ></textarea>
+          </div>
+          <!-- What are your weaknesses? -->
+          <div class="">
+            <label class="label">
+              <span class="label-text">What are your weaknesses?</span>
+            </label>
+            <textarea
+              name="weaknesses"
+              rows="1"
+              class="text-base w-full h-10 border border-warning px-3 rounded-lg outline-none pt-2"
+              placeholder="your weaknesses?"
+              required
+            ></textarea>
+          </div>
+          <!-- What can you do for us that others can't? -->
+          <div class="">
+            <label class="label">
+              <span class="label-text"
+                >What can you do for us that others can't?</span
+              >
+            </label>
+            <textarea
+              name="whatCanYouDo"
+              rows="1"
+              class="text-base w-full h-10 border border-warning px-3 rounded-lg outline-none pt-2"
+              placeholder="Explain"
+              required
+            ></textarea>
+          </div>
+          <!-- Walk me through your resume -->
+          <div class="">
+            <label class="label">
+              <span class="label-text">Walk me through your resume</span>
+            </label>
+            <textarea
+              name="resumeSummary"
+              rows="1"
+              class="text-base w-full h-10 border border-warning px-3 rounded-lg outline-none pt-2"
+              placeholder="Describe your resume"
+              required
+            ></textarea>
+          </div>
+          <!-- Attach Resume File -->
+          <div class="">
+            <label class="label">
+              <span class="label-text">Attach Resume File</span>
+            </label>
+            <input
+              type="file"
+              class="file-input file-input-bordered file-input-warning w-full h-10"
+            />
+          </div>
+          <!-- Upload your Passport size picture. -->
+          <div class="">
+            <label class="label">
+              <span class="label-text">Upload your Passport size picture.</span>
+            </label>
+            <input
+              type="file"
+              class="file-input file-input-bordered file-input-warning w-full h-10"
+            />
+          </div>
+          <!-- successfully message -->
+          <div class="md:col-span-2 lg:col-span-4 flex justify-center">
+            <p
+              id="toast"
+              class="duration-500 py-1.5 px-4 bg-green-400 text-white rounded-md opacity-0 absolute"
+            >
+              <i class="fa-regular fa-circle-check"></i> Career form submitted
+              successfully
+            </p>
+          </div>
+          <!-- button -->
+          <div class="md:col-span-2 lg:col-span-4 flex justify-center">
+            <button class="btn btn-warning text-xl px-14 mt-4">
+              <span id="btnText">Submit</span>
+              <img
+                id="btnImg"
+                class="h-8 hidden"
+                src="image/icons/spinner.gif"
+                alt=""
+              />
+            </button>
+          </div>
+        </form>
+      </section>
     </main>
+
+    <!-- footer -->
+    <footer class="footer p-10 bg-black text-gray-500">
+      <nav> 
+        <header class="footer-title">Shop</header>
+        <a href="https://insurancecart.qa/health-insurance" class="link link-hover"
+          >Health Insurance</a
+        >
+        <a href="https://insurancecart.qa/travel-insurance" class="link link-hover"
+          >Travel Insurance</a
+        >
+        <a href="https://insurancecart.qa/business-insurance" class="link link-hover"
+          >Business Insurance</a
+        >
+        <a
+          href="https://insurancecart.qa/cheap-car-automobile-quotes"
+          class="link link-hover"
+          >Car Insurance</a
+        >
+      </nav>
+      <nav>
+        <header class="footer-title">Other</header>
+        <a href="https://insurancecart.qa/house-insurance" class="link link-hover"
+          >House Insurance</a
+        >
+        <a href="https://insurancecart.qa/compare-life-insurance" class="link link-hover"
+          >Life Insurance</a
+        >
+        <a href="https://insurancecart.qa/contact" class="link link-hover"
+          >Contact</a
+        >
+        <a href="https://insurancecart.qa/" class="link link-hover"
+          >Home</a
+        >
+      </nav>
+      <nav>
+        <header class="footer-title">Legal</header>
+        <a class="link link-hover">Terms of use</a>
+        <a class="link link-hover">Privacy policy</a>
+        <a class="link link-hover">Cookie policy</a>
+      </nav>
+    </footer>
+    <footer
+      class="footer px-10 py-4 border-t bg-black text-gray-500 border-base-300"
+    >
+      <aside class="items-center grid-flow-col">
+        <img class="w-12" src="image/icons/logo.png" alt="" />
+        <p>Insurance Cart. <br />&copy; 2024 All rights reserved.</p>
+      </aside>
+      <nav class="grid-flow-col gap-6 md:place-self-center md:justify-self-end">
+        <a class="cursor-pointer" href=""
+          ><i class="fa-brands fa-facebook-f text-3xl"></i
+        ></a>
+        <a class="cursor-pointer" href=""
+          ><i class="fa-brands fa-x-twitter text-3xl"></i
+        ></a>
+        <a class="cursor-pointer" href=""
+          ><i class="fa-brands fa-whatsapp text-3xl"></i
+        ></a>
+      </nav>
+    </footer>
+
   </body>
 </html>
